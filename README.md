@@ -18,7 +18,7 @@
 - [Overview](#Overview)
 - [Table of contents](#Table-of-contents)
 - [1. Determine the problem](#1-Determine-the-problem)
-- [2. Model, Plan, Tool](#2-Plans-Model-Tools)
+- [2. Model, Plan, Tool](#2-Model-Plan-Tool)
   - [2.1. Walterfall model](#21-Walterfall-model)
   - [2.2. Plan](#22-Plan)
   - [2.3. CASE tool](#23-case-tool)
