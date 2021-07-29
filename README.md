@@ -65,7 +65,7 @@
   - [7.1.Development environment and Deployment environment](#71-Development-environment-and-Deployment-environment)
   - [7.2. Result](#72-Result)
   - [7.3. Development](#73-Development)
-# 1.  Determine the problem
+# 1. Determine the problem
 - Current status survey:
   - Need: Bookstores need a solution to help them manage their titles and sell books to customers.
   - Current status: A retail bookstore that uses personal memmory and notebooks to remember all titles and prices or just use Excel documents for basic management.
