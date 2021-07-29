@@ -53,7 +53,7 @@
     - [4.2.14. fHoaDon interface](#4214-fhoadon-interface)
     - [4.2.15. fThongKe interface](#4215-fthongke-interface)
     - [4.2.16. fBaoCao interface](#4216-fbaocao-interface)
-- [5. Architecture design](#5-Structural-design)
+- [5. Design architecture](#5-Design-architecture)
   - [5.1. System architecture](#51-System-architecture)
   - [5.2. Desribe in detail system architecture](#52-Desribe-in-detail-of-system-architecture)
 - [6. Coding conventions](#6-Coding-conventions)
@@ -62,7 +62,7 @@
   - [6.3. Control prefixed](#63-Control-prefixed)
   - [6.4. Source code distribution rules](#64-Source-code-distribution-rules)
 - [7. Result](#7-Result)
-  - [7.1.Development environment and Deployment environment](#71-Development-environment-and-Deployment-environment)
+  - [7.1. Development environment and Deployment environment](#71-Development-environment-and-Deployment-environment)
   - [7.2. Result](#72-Result)
   - [7.3. Development](#73-Development)
 # 1. Determine the problem
@@ -259,26 +259,26 @@ Chọn khoảng ngày cần thống kê bán hàng, phần mềm sẽ hiển th�
 ### 4.2.16. fBaoCao interface
 ![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/BaoCao.png)
 Xuất báo cáo chi tiết về số lượng bán đượccác loại sách, doanh thu và lợi nhuận trong khoảng ngày đã chọn ở màn hình fThongKe.
-# 5. Thiết kế kiến trúc
-## 5.1. Kiến trúc hệ thống
+# 5. Design architecture
+## 5.1. System architecture
 ![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/layer.png)
 | Thành phần | Diễn giải                         |
 |------------|-----------------------------------|
 | Client     | Ứng dụng tương tác với người dùng |
 | Data       | Nơi chứa dữ liệu của hệ thống     |
-## 5.2. Mô tả chi tiết kiến trúc hệ thống
+## 5.2. Desribe in detail system architecture
 ![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/folderview.png)
 - Ứng dụng được thiết kế theo mô hình 2 lớp (được viết chung trong 1 project) gồm:
   - View xử lý giao diện và xử lý tác vụ.
   - DAO gọi các truy xuất từ csdl (SQL).
-# 6. Quy ước viết mã
-## 6.1. Quy tắc đặt tên
+# 6. Coding conventions
+## 6.1. Naming conventions
 | Kiểu        | Mô tả           | Ví dụ        |
 |-------------|-----------------|--------------|
 | Pascal Case | Chữ cái đầu tiên trong từ định danh và chữ cái đầu tiên của mỗi từ nối theo sau phải được viết hoa. Sử dụng Pascal Case để đặt tên cho một tên có từ 3 ký tự trở lên | `CodingConv` |
 | Camel Case  | Chữ cái đầu tiên trong từ định danh là chữ thường và chữ cái đầu tiên của mối từ nối theo sau phải được viết hoa          | `codingConv` |
 | Uppercase   | Tất cả các ký tự trong từ định danh phải được viết hoa. Sử dụng quy tắc này đối với tên định danh có từ 2 ký tự trở xuống | `System.IO ` |
-## 6.2. Quy tắc sử dụng khi code
+## 6.2. Conventions used when coding
 | Loại            | Kiểu        | Ví dụ                 | Ghi chú                  |
 |-----------------|-------------|-----------------------|--------------------------|
 | Tên biến        | Camel Case  | `firstName`           | Danh từ                  |
@@ -337,7 +337,7 @@ Xuất báo cáo chi tiết về số lượng bán đượccác loại sách, d
   int Color {get, set}
   int COLOR {get, set}
   ```
-## 6.3. Tiền tố một số control
+## 6.3. Control prefixed
 Bắt buộc đặt tên cho tất cả các control có tham gia xử lý dưới nền. Một số control được đặt theo kiểu Pascal với phần tiền tố như sau:
 | Control      | Tiền tố | Ví dụ       |
 |--------------|---------|-------------|
@@ -351,7 +351,7 @@ Bắt buộc đặt tên cho tất cả các control có tham gia xử lý dư�
 | User Control | uc      | ucBooks     |
 | Label        | lbl     | lblName     |
 | DataGridView | dgv     | dgvBook     |
-## 6.4. Quy định phân bố mã nguồn
+## 6.4. Source code distribution rules
 - Mỗi file mã nguồn chỉ chứa duy nhất một class. Tên class chính phải trùng với tên file mã nguồn. Ví dụ: Class Student sẽ được chứa trong file Student.cs.
 - Với các kiểu enum, struct độc lập đơn giản ngoài class có thể được khai báo trong một file mã nguồn riêng hoặc trong file mã nguồn của class khác.
 - Interface phải được khai báo trong một file mã nguồn riêng.
@@ -373,8 +373,8 @@ Bắt buộc đặt tên cho tất cả các control có tham gia xử lý dư�
   ```
   public class Student : Human {}
   ```
-# 7. Kết quả thực hiện
-## 7.1. Môi trường phát triển và Môi trường triển khai
+# 7. Result
+## 7.1. Development environment and Deployment environment
 - Môi trường phát triển ứng dụng:
   - Hệ điều hành: Microsoft Windows 10
   - Hệ quản trị cơ sở dữ liệu: Microsoft SQL Server
@@ -384,9 +384,9 @@ Bắt buộc đặt tên cho tất cả các control có tham gia xử lý dư�
   - Hệ điều hành: Microsoft Windows
   - Cần cài đặt .Net Framework 4.0 hoặc cao hơn
   - Để chương trình hoạt động cần có đủ các dll trong folder dll
-## 7.2. Kết quả đạt được
+## 7.2. Result
 - Chương trình đã được hoàn thiện hầu hết các chức năng, nhưng vẫn có những chức năng chưa được hoàn thiện như: Thêm tài khoản, Xuất file báo cáo dạng PDF hoặc Excel.
-## 7.3. Hướng phát triển
+## 7.3. Development
 - Hoàn thiện các chức năng và giao diện chưa hoàn tất.
 - Cải thiện hiệu năng của chương trình để phù hợp với thực tiễn.
 - Bổ sung các chức năng liên quan đến CSDL: backup/restore.
