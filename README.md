@@ -18,11 +18,11 @@
 - [Overview](#Overview)
 - [Table of contents](#Table-of-contents)
 - [1. Determine the problem](#1-Determine-the-problem)
-- [2. Plans, Processes, Tools](#2-Plans-Processes-Tools)
+- [2. Model, Plan, Tool](#2-Plans-Model-Tools)
   - [2.1. Walterfall model](#21-Walterfall-model)
-  - [2.2. Plans](#22-Plans)
+  - [2.2. Plan](#22-Plans)
   - [2.3. CASE tool](#23-case-tool)
-- [3. Data design](#3-Data-design)
+- [3. Design data](#3-Design-data)
   - [3.1. Logic diagram](#31-Logic-diagram)
   - [3.2. Describe in detail the data types in the logic diagram](#32-Describe-in-detail-the-data-types-in-the-logic-diagram)
     - [3.2.1. TAIKHOAN table](#321-taikhoan-table)
@@ -34,7 +34,7 @@
     - [3.2.7. KHO table](#327-kho-table)
     - [3.2.8. HOADON table](#328-hoadon-table)
     - [3.2.9. CHITIETHOADON table](#329-chitiethoadon-table)
-- [4. Interface design](#4-Interface-design)
+- [4. Design interface](#4-Design-interface)
   - [4.1. Interface list](#41-Interface-list)
   - [4.2. Describe in detail of each interface](#42-Describe-in-detail-of-each-interface)
     - [4.2.1. fDangNhap interface](#421-fdangnhap-interface)
@@ -78,34 +78,33 @@
   - Revenue statistics.
   - Manage account.
   - Manage the number of books in stock.
-# 2. Plans, Processes, Tools
+# 2. Model, Plan, Tool
 ## 2.1. Walterfall model
 ![](https://github.com/hoainam2310/BookStore_Management/blob/main/model.png)
 
-Mô hình này gồm các giai đoạn xử lý nối tiếp nhau như sau:
+This model consists of successive processing stages as follows:
 
-- Thu thập yêu cầu: xác định các yêu cầu chức năng và phi chức năng mà hệ thống phần mềm cần có.
+- Analysis: Determine the functional and non-functional requirements required by the software system.
 
-- Phân tích yêu cầu phần mềm: xác định hệ thống phần mềm đáp ứng đúng yêu cầu của khách hàng. Giai đoạn này thực hiện phân tích, thiết kế hệ thống phần mềm.
+- Requirement specification: Determine the software system that meets the requirements of the customer. This phase performs analysis and design of the software system.
+- Design: Build model of software, design data and interface.
 
-- Thiết kế: xây dựng mô hình của phần mềm, thiết kế dữ liệu, thiết kế giao diện và thiết kế xử lý
+- Development: Impelemt product based on requirement specification and module design document.
 
-- Phát triển: thực hiện sản phẩm dựa trên đặc tả yêu cầu và tài liệu thiết kế module.
+- Testing and Integration: Perform group testing of components and system testing. Check for possible exceptions and fix them.
+## 2.2. Plan
+![](https://github.com/hoainam2310/BookStore_Management/blob/main/roadmap.png)
 
-- Testing: thực hiện kiểm thử cho nhóm các thành phần và kiểm thử hệ thống. Kiểm tra các ngoại lệ có thể xảy ra và sửa lỗi
-## 2.2. Kế hoạch
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/roadmap.png)
+The plan consists of 5 stages:
+- Analysis (03/04 - 11/04)
 
-Kế hoạch gồm 5 giai đoạn:
-- Analysis: Phân tích yêu cầu bài toán (03/04 đến 11/04)
+- Requirement (11/04 v 24/04)
 
-- Requirement: Phân tích yêu cầu phần mềm gồm yêu cầu nghiệp vụ và tối ưu hệ thống (11/04 đến 24/04)
+- Design (24/04 - 21/05)
 
-- Design: Thiết kế sơ đồ luồng dữ liệu, thiết kế dữ liệu, thiết kế giao diện và thiết kế xử lý (24/04 đến 21/05)
+- Development (21/05 - 05/07)
 
-- Development: phát triển các chức năng của phần mềm và cơ sở dữ liệu (21/05 - 05/07)
-
-- Testing: kiểm thử phần mềm và fix lỗi gặp phải (05/07 - 10/07)
+- Testing (05/07 - 10/07)
 
 ## 2.3. CASE tool
 - IDE: Visual Studio
@@ -113,88 +112,88 @@ Kế hoạch gồm 5 giai đoạn:
 - Code Repositories: Github
 
 - Issues tracking: Github
-# 3. Thiết kế dữ liệu
-## 3.1. Sơ đồ logic
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/database.png)
-## 3.2. Mô tả chi tiết các kiểu dữ liệu trong sơ đồ logic
-### 3.2.1. Bảng TAIKHOAN
-| STT | Tên thuộc tính | Kiểu          | Ràng buộc                   | Ý nghĩa/Ghi chú             |
-|-----|----------------|---------------|-----------------------------|-----------------------------|
-| 1   | USERNAME       | nvarchar(20)  | Tự phát sinh                | Tên đăng nhập hệ thống      |
-| 2   | PASS_WORD      | nvarchar(100) | Khác null                   | Mật khẩu đăng nhập hệ thống |
-### 3.2.2. Bảng TACGIA
-| STT | Tên thuộc tính | Kiểu          | Ràng buộc                   | Ý nghĩa/Ghi chú             |
-|-----|----------------|---------------|-----------------------------|-----------------------------|
-| 1   | MATG           | char(7)       | Tự phát sinh                | Mã phân biệt tác giả        |
-| 2   | TENTG          | nvarchar(40)  | Khác null                   | Tên tác giả                 |
-| 3   | NAMSINH        | date          | Không có ràng buộc          | Năm sinh của tác giả        |
-| 4   | NAMMAT         | date          | Không có ràng buộc          | Năm mất của tác giả         |
-| 5   | QUEQUAN        | nvarchar(20)  | Không có ràng buộc          | Quê quán của tác giả        |
-### 3.2.3. Bảng LINHVUC
-| STT | Tên thuộc tính | Kiểu          | Ràng buộc                   | Ý nghĩa/Ghi chú             |
-|-----|----------------|---------------|-----------------------------|-----------------------------|
-| 1   | TENLINHVUC     | nvarchar(30)  | Khác Null                   | Tên lĩnh vực sách           |
-### 3.2.4. Bảng LOAISACH
-| STT | Tên thuộc tính | Kiểu          | Ràng buộc                   | Ý nghĩa/Ghi chú             |
-|-----|----------------|---------------|-----------------------------|-----------------------------|
-| 1   | TENLOAISACH    | nvarchar(30)  | Khác Null                   | Tên loại sách               |
-### 3.2.5. Bảng NHAXUATBAN
-| STT | Tên thuộc tính | Kiểu          | Ràng buộc                   | Ý nghĩa/Ghi chú             |
-|-----|----------------|---------------|-----------------------------|-----------------------------|
-| 1   | TENNHAXUATBAN  | nvarchar(50)  | Khác Null                   | Tên nhà xuất bản sách       |
-### 3.2.6. Bảng SACH
-| STT | Tên thuộc tính | Kiểu          | Ràng buộc                   | Ý nghĩa/Ghi chú             |
-|-----|----------------|---------------|-----------------------------|-----------------------------|
-| 1   | MASACH         | char(7)       | Tự phát sinh                | Mã phân biệt sách           |
-| 2   | TENSACH        | nvarchar(100) | Khác null                   | Tên của sách                |
-| 3   | MATG           | char(7)       | Khác Null, đã tồn tại trước | Mã phân biệt tác giả        |
-| 4   | TENLINHVUC     | nvarchar(30)  | Khác Null, đã tồn tại trước | Tên lĩnh vực sách           |
-| 5   | TENLOAISACH    | nvarchar(30)  | Khác Null, đã tồn tại trước | Tên loại sách               |
-| 6   | GIAMUA         | int           | >= 0                        | Giá nhập sách               |
-| 7   | GIABIA         | int           | >= 0                        | Giá bán sách                |
-| 8   | LANTAIBAN      | int           | >= 0                        | Số lần tái bản của sách     |
-| 9   | TENNHAXUATBAN  | nvarchar(50)  | Khác Null, đã tồn tại trước | Tên nhà xuất bản sách       |
-| 10  | NAMXUATBAN     | datetime      | Khác Null, đã tồn tại trước | Năm sách được xuất bản      |
-### 3.2.7. Bảng KHO
-| STT | Tên thuộc tính | Kiểu          | Ràng buộc                   | Ý nghĩa/Ghi chú             |
-|-----|----------------|---------------|-----------------------------|-----------------------------|
-| 1   | MASACH         | char(7)       | Đã tồn tại trước            | Mã phân biệt sách           |
-| 2   | SOLUONG        | int           | >= 1                        | Số lượng sách còn           |
-### 3.2.8. Bảng HOADON
-| STT | Tên thuộc tính | Kiểu          | Ràng buộc                   | Ý nghĩa/Ghi chú             |
-|-----|----------------|---------------|-----------------------------|-----------------------------|
-| 1   | MAHOADON       | char(7)       | Tự phát sinh                | Mã phân biệt hóa đơn        |
-| 2   | TENKHACHHANG   | nvarchar(50)  | Khác null                   | Tên của khách hàng          |
-| 3   | NGAYLAP        | datetime      | Tự phát sinh                | Ngày lập hóa đơn            |
-| 4   | TONGTIEN       | decimal(10, 2)| >= 0                        | Tổng tiền hóa đơn           |
-### 3.2.9. Bảng CHITIETHOADON
-| STT | Tên thuộc tính | Kiểu          | Ràng buộc                   | Ý nghĩa/Ghi chú             |
-|-----|----------------|---------------|-----------------------------|-----------------------------|
-| 1   | MAHOADON       | char(7)       | Đã tồn tại trước            | Mã phân biệt hóa đơn        |
-| 2   | MASACH         | char(7)       | Đã tồn tại trước            | Mã phân biệt sách           |
-| 3   | SOLUONG        | int           | >= 1                        | Số lượng sách mua           |
-| 4   | GIATIEN        | int           | >= 0                        | Giá bán sách                |
-| 5   | THANHTIEN      | int           | >= 0                        | Giá bán sách x Số lượng sách|
+# 3. Design Data
+## 3.1. Logic diagram
+![](https://github.com/hoainam2310/BookStore_Management/blob/main/database.png)
+## 3.2.Describe in detail the data types in the logic diagram
+### 3.2.1. TAIKHOAN table
+| Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
+|---------|----------------|---------------|-----------------------------|-----------------------------|
+| 1       | USERNAME       | nvarchar(20)  | Selt-generated              | System login name           |
+| 2       | PASS_WORD      | nvarchar(100) | Not null                    | System login password       |
+### 3.2.2. TACGIA table
+| Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
+|---------|----------------|---------------|-----------------------------|-----------------------------|
+| 1       | MATG           | char(7)       | Selt-generated              | Mã phân biệt tác giả        |
+| 2       | TENTG          | nvarchar(40)  | Not null                    | Tên tác giả                 |
+| 3       | NAMSINH        | date          | No constraint               | Năm sinh của tác giả        |
+| 4       | NAMMAT         | date          | No constraint               | Năm mất của tác giả         |
+| 5       | QUEQUAN        | nvarchar(20)  | No constraint               | Quê quán của tác giả        |
+### 3.2.3. LINHVUC table
+| Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
+|---------|----------------|---------------|-----------------------------|-----------------------------|
+| 1       | TENLINHVUC     | nvarchar(30)  | Not Null                    | Tên lĩnh vực sách           |
+### 3.2.4. LOAISACH table
+| Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
+|---------|----------------|---------------|-----------------------------|-----------------------------|
+| 1       | TENLOAISACH    | nvarchar(30)  | Not Null                    | Tên loại sách               |
+### 3.2.5. NHAXUATBAN table
+| Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
+|---------|----------------|---------------|-----------------------------|-----------------------------|
+| 1       | TENNHAXUATBAN  | nvarchar(50)  | Not Null                    | Tên nhà xuất bản sách       |
+### 3.2.6. SACH table
+| Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
+|---------|----------------|---------------|-----------------------------|-----------------------------|
+| 1       | MASACH         | char(7)       | Selt-generated              | Mã phân biệt sách           |
+| 2       | TENSACH        | nvarchar(100) | Not null                    | Tên của sách                |
+| 3       | MATG           | char(7)       | Not Null, Existed           | Mã phân biệt tác giả        |
+| 4       | TENLINHVUC     | nvarchar(30)  | Not Null, Existed           | Tên lĩnh vực sách           |
+| 5       | TENLOAISACH    | nvarchar(30)  | Not Null, Existed           | Tên loại sách               |
+| 6       | GIAMUA         | int           | >= 0                        | Giá nhập sách               |
+| 7       | GIABIA         | int           | >= 0                        | Giá bán sách                |
+| 8       | LANTAIBAN      | int           | >= 0                        | Số lần tái bản của sách     |
+| 9       | TENNHAXUATBAN  | nvarchar(50)  | Not Null, Existed           | Tên nhà xuất bản sách       |
+| 10      | NAMXUATBAN     | datetime      | Not Null, Existed           | Năm sách được xuất bản      |
+### 3.2.7. KHO table
+| Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
+|---------|----------------|---------------|-----------------------------|-----------------------------|
+| 1       | MASACH         | char(7)       | Existed                     | Mã phân biệt sách           |
+| 2       | SOLUONG        | int           | >= 1                        | Số lượng sách còn           |
+### 3.2.8. HOADON table
+| Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
+|---------|----------------|---------------|-----------------------------|-----------------------------|
+| 1       | MAHOADON       | char(7)       | Selt-generated              | Mã phân biệt hóa đơn        |
+| 2       | TENKHACHHANG   | nvarchar(50)  | Not null                    | Tên của khách hàng          |
+| 3       | NGAYLAP        | datetime      | Selt-generated              | Ngày lập hóa đơn            |
+| 4       | TONGTIEN       | decimal(10, 2)| >= 0                        | Tổng tiền hóa đơn           |
+### 3.2.9. CHITIETHOADON table
+| Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
+|---------|----------------|---------------|-----------------------------|-----------------------------|
+| 1       | MAHOADON       | char(7)       | Existed                     | Mã phân biệt hóa đơn        |
+| 2       | MASACH         | char(7)       | Existed                     | Mã phân biệt sách           |
+| 3       | SOLUONG        | int           | >= 1                        | Số lượng sách mua           |
+| 4       | GIATIEN        | int           | >= 0                        | Giá bán sách                |
+| 5       | THANHTIEN      | int           | >= 0                        | Giá bán sách x Số lượng sách|
 # 4. Thiết kế giao diện
 ## 4.1. Danh sách màn hình
-| STT | Tên màn hình | Ý nghĩa/Ghi chú                                                                          |
-|-----|--------------|------------------------------------------------------------------------------------------|
-| 1   | fDangNhap    | Đăng nhập vào hệ thống bằng username và password                                         |
-| 2   | fViewTong    | Màn hình chính, hiển thị danh sách các đầu sách hiện có                                  |
-| 3   | fTaiKhoan    | Hiển thị danh sách user của hệ thống và chỉnh sửa mật khẩu                               |
-| 4   | fThemSach    | Nhập thông tin để thêm sách                                                              |
-| 5   | fSuaSach     | Sửa thông tin của sách theo mã sách                                                      |
-| 6   | fXoaSach     | Xóa thông tin của sách theo mã sách                                                      |
-| 7   | fThemTacGia  | Nhập thông tin để thêm tác giả                                                           |
-| 8   | fSuaTacGia   | Sửa thông tin của tác giả theo mã tác giả                                                |
-| 9   | fXoaTacGia   | Xóa thông tin của tác giả theo mã tác giả                                                |
-| 10  | fLinhVuc     | Thêm và xóa lĩnh vực sách                                                                |
-| 11  | fLoaiSach    | Thêm và xóa loại sách                                                                    |
-| 12  | fNhaXuatBan  | Thêm và xóa nhà xuất bản sách                                                            |
-| 13  | fKho         | Hiển thị số lượng sách còn trong kho và thêm số lượng sách                               |
-| 14  | fHoaDon      | Hiển thị hóa đơn và chi tiết hóa đơn. Thêm/xóa/sửa hóa đơn và chi tiết hóa đơn           |
-| 15  | fThongKe     | Hiển thị danh sách hóa đơn trong khoảng ngày chọn                                        |
-| 16  | fBaoCao      | Hiển thị danh sách các đầu sách đã bán được, doanh thu, lợi nhuận trong khoảng ngày chọn |
+| Numbers | Interface name | Meaning/Notes                                                                          |
+|---------|----------------|------------------------------------------------------------------------------------------|
+| 1       | fDangNhap      | Đăng nhập vào hệ thống bằng username và password                                         |
+| 2       | fViewTong      | Màn hình chính, hiển thị danh sách các đầu sách hiện có                                  |
+| 3       | fTaiKhoan      | Hiển thị danh sách user của hệ thống và chỉnh sửa mật khẩu                               |
+| 4       | fThemSach      | Nhập thông tin để thêm sách                                                              |
+| 5       | fSuaSach       | Sửa thông tin của sách theo mã sách                                                      |
+| 6       | fXoaSach       | Xóa thông tin của sách theo mã sách                                                      |
+| 7       | fThemTacGia    | Nhập thông tin để thêm tác giả                                                           |
+| 8       | fSuaTacGia     | Sửa thông tin của tác giả theo mã tác giả                                                |
+| 9       | fXoaTacGia     | Xóa thông tin của tác giả theo mã tác giả                                                |
+| 10      | fLinhVuc       | Thêm và xóa lĩnh vực sách                                                                |
+| 11      | fLoaiSach      | Thêm và xóa loại sách                                                                    |
+| 12      | fNhaXuatBan    | Thêm và xóa nhà xuất bản sách                                                            |
+| 13      | fKho           | Hiển thị số lượng sách còn trong kho và thêm số lượng sách                               |
+| 14      | fHoaDon        | Hiển thị hóa đơn và chi tiết hóa đơn. Thêm/xóa/sửa hóa đơn và chi tiết hóa đơn           |
+| 15      | fThongKe       | Hiển thị danh sách hóa đơn trong khoảng ngày chọn                                        |
+| 16      | fBaoCao        | Hiển thị danh sách các đầu sách đã bán được, doanh thu, lợi nhuận trong khoảng ngày chọn |
 ## 4.2. Mô tả chi tiết mỗi màn hình
 ### 4.2.1. Màn hình fDangNhap
 ![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/DangNhap.png)
