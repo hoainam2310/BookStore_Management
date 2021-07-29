@@ -174,8 +174,8 @@ The plan consists of 5 stages:
 | 3       | SOLUONG        | int           | >= 1                        | Số lượng sách mua           |
 | 4       | GIATIEN        | int           | >= 0                        | Giá bán sách                |
 | 5       | THANHTIEN      | int           | >= 0                        | Giá bán sách x Số lượng sách|
-# 4. Thiết kế giao diện
-## 4.1. Danh sách màn hình
+# 4. Design interface
+## 4.1. Interface list
 | Numbers | Interface Name | Meaning/Notes                                                                          |
 |---------|----------------|------------------------------------------------------------------------------------------|
 | 1       | fDangNhap      | Đăng nhập vào hệ thống bằng username và password                                         |
@@ -194,7 +194,7 @@ The plan consists of 5 stages:
 | 14      | fHoaDon        | Hiển thị hóa đơn và chi tiết hóa đơn. Thêm/xóa/sửa hóa đơn và chi tiết hóa đơn           |
 | 15      | fThongKe       | Hiển thị danh sách hóa đơn trong khoảng ngày chọn                                        |
 | 16      | fBaoCao        | Hiển thị danh sách các đầu sách đã bán được, doanh thu, lợi nhuận trong khoảng ngày chọn |
-## 4.2. Mô tả chi tiết mỗi màn hình
+## 4.2. Describe in detail of each interface
 ### 4.2.1. Màn hình fDangNhap
 ![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/DangNhap.png)
 
