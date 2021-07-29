@@ -124,11 +124,11 @@ The plan consists of 5 stages:
 ### 3.2.2. TACGIA table
 | Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
 |---------|----------------|---------------|-----------------------------|-----------------------------|
-| 1       | MATG           | char(7)       | Selt-generated              | Mã phân biệt tác giả        |
-| 2       | TENTG          | nvarchar(40)  | Not null                    | Tên tác giả                 |
-| 3       | NAMSINH        | date          | No constraint               | Năm sinh của tác giả        |
-| 4       | NAMMAT         | date          | No constraint               | Năm mất của tác giả         |
-| 5       | QUEQUAN        | nvarchar(20)  | No constraint               | Quê quán của tác giả        |
+| 1       | MATG           | char(7)       | Selt-generated              | Author identification code  |
+| 2       | TENTG          | nvarchar(40)  | Not null                    | Author name                 |
+| 3       | NAMSINH        | date          | No constraint               | Year of birth               |
+| 4       | NAMMAT         | date          | No constraint               | Year of death               |
+| 5       | QUEQUAN        | nvarchar(20)  | No constraint               | Hometown                    |
 ### 3.2.3. LINHVUC table
 | Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
 |---------|----------------|---------------|-----------------------------|-----------------------------|
@@ -176,7 +176,7 @@ The plan consists of 5 stages:
 | 5       | THANHTIEN      | int           | >= 0                        | Giá bán sách x Số lượng sách|
 # 4. Thiết kế giao diện
 ## 4.1. Danh sách màn hình
-| Numbers | Interface name | Meaning/Notes                                                                          |
+| Numbers | Interface Name | Meaning/Notes                                                                          |
 |---------|----------------|------------------------------------------------------------------------------------------|
 | 1       | fDangNhap      | Đăng nhập vào hệ thống bằng username và password                                         |
 | 2       | fViewTong      | Màn hình chính, hiển thị danh sách các đầu sách hiện có                                  |
