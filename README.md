@@ -65,22 +65,22 @@
   - [7.1.Development environment and Deployment environment](#71-Development-environment-and-Deployment-environment)
   - [7.2. Result](#72-Result)
   - [7.3. Development](#73-Development)
-# 1. Xác định bài toán
-- Khảo sát hiện trạng:
-  - Nhu cầu: Các cửa hàng sách cần 1 giải pháp giúp họ có thể quản lý các đầu sách và bán sách cho khách hàng.
-  - Hiện trạng: Đơn vị là 1 cửa hàng sách bán lẻ, sử dụng sổ tay và trí nhớ của cá nhân con người để nhớ tất cả các đầu sách và giá bán. Hoặc chỉ có thể dùng các tài liệu Excel để quản lý 1 cách cơ bản.
-  - Công nghệ đang sử dụng: Microsoft Excel hoặc không sử dụng công nghệ thông tin.
-  - Hạn chế những phần mềm hiện có: Không có ứng dụng chuyên biệt cho cả 2 việc bán sách và quản lý.
-- Yêu cầu hệ thống:
-  - Thêm/xóa/sửa sách và thông tin sách. Nhập sách.
-  - Phân loại theo tác giả, lĩnh vực, loại sách, NXB của từng đầu sách.
-  - Tích hợp hệ thống thanh toán cho cửa hàng.
-  - Thống kê doanh thu.
-  - Quản lý tài khoản.
-  - Quản lý số lượng sách tồn.
-# 2. Kế hoạch, Quy trình, Công cụ
-## 2.1. Quy trình Walterfall
-![](https://github.com/danghoangminh/quan-li-nha-sach/blob/finalcode/model.png)
+# 1.  Determine the problem
+- Current status survey:
+  - Need: Bookstores need a solution to help them manage their titles and sell books to customers.
+  - Current status: A retail bookstore that uses personal memmory and notebooks to remember all titles and prices or just use Excel documents for basic management.
+  - Technology used: Microsoft Excel or don't use information technology.
+  - Limitations of existing software: There is no decicated application for both book sales and management.
+- System requirements:
+  - Add/Delete/Edit books and book information. 
+  - Categorize books based on author, field, type of book and publisher.
+  - Apply the payment system for bookstore.
+  - Revenue statistics.
+  - Manage account.
+  - Manage the number of books in stock.
+# 2. Plans, Processes, Tools
+## 2.1. Walterfall model
+![](https://github.com/hoainam2310/BookStore_Management/blob/main/model.png)
 
 Mô hình này gồm các giai đoạn xử lý nối tiếp nhau như sau:
 
