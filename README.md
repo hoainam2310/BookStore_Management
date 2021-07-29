@@ -55,7 +55,7 @@
     - [4.2.16. fBaoCao interface](#4216-fbaocao-interface)
 - [5. Design architecture](#5-Design-architecture)
   - [5.1. System architecture](#51-System-architecture)
-  - [5.2. Desribe in detail system architecture](#52-Desribe-in-detail-of-system-architecture)
+  - [5.2. Desribe in detail system architecture](#52-Desribe-in-detail-system-architecture)
 - [6. Coding conventions](#6-Coding-conventions)
   - [6.1. Naming conventions](#61-Naming-conventions)
   - [6.2. Conventions used when coding](#62-Conventions-used-when-coding)
