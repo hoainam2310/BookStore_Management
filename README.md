@@ -115,7 +115,7 @@ The plan consists of 5 stages:
 # 3. Design Data
 ## 3.1. Logic diagram
 ![](https://github.com/hoainam2310/BookStore_Management/blob/main/database.png)
-## 3.2.Describe in detail the data types in the logic diagram
+## 3.2. Describe in detail the data types in the logic diagram
 ### 3.2.1. TAIKHOAN table
 | Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
 |---------|----------------|---------------|-----------------------------|-----------------------------|
