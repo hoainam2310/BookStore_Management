@@ -132,15 +132,15 @@ The plan consists of 5 stages:
 ### 3.2.3. LINHVUC table
 | Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
 |---------|----------------|---------------|-----------------------------|-----------------------------|
-| 1       | TENLINHVUC     | nvarchar(30)  | Not Null                    | Tên lĩnh vực sách           |
+| 1       | TENLINHVUC     | nvarchar(30)  | Not Null                    | Name of book field          |
 ### 3.2.4. LOAISACH table
 | Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
 |---------|----------------|---------------|-----------------------------|-----------------------------|
-| 1       | TENLOAISACH    | nvarchar(30)  | Not Null                    | Tên loại sách               |
+| 1       | TENLOAISACH    | nvarchar(30)  | Not Null                    | Name of the type of book    |
 ### 3.2.5. NHAXUATBAN table
 | Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
 |---------|----------------|---------------|-----------------------------|-----------------------------|
-| 1       | TENNHAXUATBAN  | nvarchar(50)  | Not Null                    | Tên nhà xuất bản sách       |
+| 1       | TENNHAXUATBAN  | nvarchar(50)  | Not Null                    | Name of book producer       |
 ### 3.2.6. SACH table
 | Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
 |---------|----------------|---------------|-----------------------------|-----------------------------|
