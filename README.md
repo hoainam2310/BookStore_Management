@@ -204,70 +204,70 @@ User fills in Username/Password information to log in. If the login fails more t
 
 Displays the titles in the database, the revenue and the number of customers that day. The Menu above contains the program's functions. 
 ### 4.2.3. fTaiKhoan interface
-![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/ThayDoiThongTinAcc.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/finalcode/Scene/ThayDoiThongTinAcc.png)
 
 Allows to change the account's password, requires entering the correct old password when you want to change the new password.
 ### 4.2.4. fThemSach interface
-![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/ThemSach.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/finalcode/Scene/ThemSach.png)
 
 Allows adding new titles to the database. Please enter complete information, otherwise, you'll receive a missing input error and ask additional information.
 ### 4.2.5. fSuaSach interface
-![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/SuaSach.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/finalcode/Scene/SuaSach.png)
 
 Allows editting book information in the database. Please enter complete information, otherwise, you'll receive a missing input error and ask for additional information.
 ### 4.2.6. fXoaSach interface
-![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/XoaSach.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/finalcode/Scene/XoaSach.png)
 
 Allows deleting books in the database. Select the book to delete in the list of displayed books.
 ### 4.2.7. fThemTacGia interface
-![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/ThemTG.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/finalcode/Scene/ThemTG.png)
 
 Allows adding new authors to the database. Please enter the author's name, otherwise it will report a missing input error and add for additional information. For the box "Hometown", "Year of birth", "Year of death", if it's not available, you must select the "unknown" button or it will report an error of missing information.
 ### 4.2.8. fSuaTacGia interface
-![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/SuaTG.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/finalcode/Scene/SuaTG.png)
 
 Allows editting author information in the database. Please enter the author's name, otherwise it will report a missing input error and add for additional information. For the box "Hometown", "Year of birth", "Year of death", if it's not available, you must select the "unknown" button or it will report an error of missing information.
 ### 4.2.9. fXoaTacGia interface
-![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/XoaTG.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/finalcode/Scene/XoaTG.png)
 
 Allows deleting authors in the database. Select the authors to delete in the list of displayed authors.
 ### 4.2.10. fLinhVuc interface
-![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/LinhVuc.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/finalcode/Scene/LinhVuc.png)
 
 Allows adding new fields to the database. If you want to delete, select the fields to delete in the Menu below and press the delete button.
 ### 4.2.11. fLoaiSach interface
-![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/LoaiSach.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/finalcode/Scene/LoaiSach.png)
 
 Allows adding new book categories to the database. If you want to delete, select the book categories to delete in the Menu below and press the delete button.
 ### 4.2.12. fNhaXuatBan interface
-![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/NXB.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/finalcode/Scene/NXB.png)
 
 Allows adding new publishers to the database. If you want to delete, select the publishers to delete in the Menu below and press the delete button.
 ### 4.2.13. fKho interface
-![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/Kho.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/finalcode/Scene/Kho.png)
 Gồm 2 phần:
 - Phần trên: cho phép sửa số lượng sách có trong kho hoặc xóa luôn sách.
 - Phần dưới: thêm số lượng cho đầu sách có trong kho.
 ### 4.2.14. fHoaDon interface
-![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/HoaDon.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/finalcode/Scene/HoaDon.png)
 Gồm 2 phần:
 - Phần trên: hiển thị danh sách hóa đơn hiện có trong database cho phép xóa/sửa hóa đơn và xem chi tiết hóa đơn đó ở bảng kế bên.
 - Phần dưới: thêm/sửa hóa đơn, thêm vật phẩm vô hóa đơn, yêu cầu nhập đầy đủ thông tin.
 ### 4.2.15. fThongKe interface
-![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/ThongKe.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/finalcode/Scene/ThongKe.png)
 Chọn khoảng ngày cần thống kê bán hàng, phần mềm sẽ hiển thị những hóa đơn trong khoảng ngày được chọn.
 ### 4.2.16. fBaoCao interface
-![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/BaoCao.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/finalcode/Scene/BaoCao.png)
 Xuất báo cáo chi tiết về số lượng bán đượccác loại sách, doanh thu và lợi nhuận trong khoảng ngày đã chọn ở màn hình fThongKe.
 # 5. Design architecture
 ## 5.1. System architecture
-![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/layer.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/finalcode/layer.png)
 | Thành phần | Diễn giải                         |
 |------------|-----------------------------------|
 | Client     | Ứng dụng tương tác với người dùng |
 | Data       | Nơi chứa dữ liệu của hệ thống     |
 ## 5.2. Desribe in detail system architecture
-![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/folderview.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/finalcode/folderview.png)
 - Ứng dụng được thiết kế theo mô hình 2 lớp (được viết chung trong 1 project) gồm:
   - View xử lý giao diện và xử lý tác vụ.
   - DAO gọi các truy xuất từ csdl (SQL).
