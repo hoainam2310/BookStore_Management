@@ -245,6 +245,7 @@ Allows adding new book categories to the database. If you want to delete, select
 Allows adding new publishers to the database. If you want to delete, select the publishers to delete in the Menu below and press the delete button.
 ### 4.2.13. fKho interface
 ![](https://github.com/hoainam2310/BookStore_Management/blob/main/Scene/Kho.png)
+
 Gồm 2 phần:
 - Phần trên: cho phép sửa số lượng sách có trong kho hoặc xóa luôn sách.
 - Phần dưới: thêm số lượng cho đầu sách có trong kho.
