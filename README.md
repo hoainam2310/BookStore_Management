@@ -234,31 +234,32 @@ Allows deleting authors in the database. Select the authors to delete in the lis
 ### 4.2.10. fLinhVuc interface
 ![](https://github.com/hoainam2310/BookStore_Management/blob/main/Scene/LinhVuc.png)
 
-Allows adding new fields to the database. If you want to delete, select the fields to delete in the Menu below and press the delete button.
+Allows add new fields to the database. If you want to delete, select the fields to delete in the Menu below and press the delete button.
 ### 4.2.11. fLoaiSach interface
 ![](https://github.com/hoainam2310/BookStore_Management/blob/main/Scene/LoaiSach.png)
 
-Allows adding new book categories to the database. If you want to delete, select the book categories to delete in the Menu below and press the delete button.
+Allows add new book categories to the database. If you want to delete, select the book categories to delete in the Menu below and press the delete button.
 ### 4.2.12. fNhaXuatBan interface
 ![](https://github.com/hoainam2310/BookStore_Management/blob/main/Scene/NXB.png)
 
-Allows adding new publishers to the database. If you want to delete, select the publishers to delete in the Menu below and press the delete button.
+Allows add new publishers to the database. If you want to delete, select the publishers to delete in the Menu below and press the delete button.
 ### 4.2.13. fKho interface
 ![](https://github.com/hoainam2310/BookStore_Management/blob/main/Scene/Kho.png)
 
-Gồm 2 phần:
-- Phần trên: cho phép sửa số lượng sách có trong kho hoặc xóa luôn sách.
-- Phần dưới: thêm số lượng cho đầu sách có trong kho.
+Consists of 2 parts:
+- Upper part: Allows edit the number of books in stock or delete books.
+- Lower part: Add quantity for the books in stock.
 ### 4.2.14. fHoaDon interface
 ![](https://github.com/hoainam2310/BookStore_Management/blob/main/Scene/HoaDon.png)
-Gồm 2 phần:
-- Phần trên: hiển thị danh sách hóa đơn hiện có trong database cho phép xóa/sửa hóa đơn và xem chi tiết hóa đơn đó ở bảng kế bên.
-- Phần dưới: thêm/sửa hóa đơn, thêm vật phẩm vô hóa đơn, yêu cầu nhập đầy đủ thông tin.
+Consists of 2 parts:
+- Upper part: Displays a list of existing bills in the database allowing to delete/edit bills and view details of that bill in the next table.
+- Lower part: Add/Edit bills, add the items to the bill and ask for full information.
 ### 4.2.15. fThongKe interface
 ![](https://github.com/hoainam2310/BookStore_Management/blob/main/Scene/ThongKe.png)
 Chọn khoảng ngày cần thống kê bán hàng, phần mềm sẽ hiển thị những hóa đơn trong khoảng ngày được chọn.
 ### 4.2.16. fBaoCao interface
 ![](https://github.com/hoainam2310/BookStore_Management/blob/main/Scene/BaoCao.png)
+
 Xuất báo cáo chi tiết về số lượng bán đượccác loại sách, doanh thu và lợi nhuận trong khoảng ngày đã chọn ở màn hình fThongKe.
 # 5. Design architecture
 ## 5.1. System architecture
