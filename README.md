@@ -279,19 +279,19 @@ Export a detailed report on the number of books sold, revenue and profit for the
 |-------------|-----------------|--------------|
 | Pascal Case | First letter of the identifier and the first letter of each word that follows must be capitalized. Use Pascal Case to name a name with 3 or more characters | `CodingConv` |
 | Camel Case  | First letter of the identifier is lowercase and the first letter of each word that follows must be capitalized          | `codingConv` |
-| Uppercase   | All characters in the identifier must be capitalized. Use this rule for identifiers with 2 characters or les | `System.IO ` |
+| Uppercase   | All characters in the identifier must be capitalized. Use this rule for identifiers with 2 characters or less | `System.IO ` |
 ## 6.2. Conventions used when coding
-| Loại            | Kiểu        | Ví dụ                 | Ghi chú                  |
-|-----------------|-------------|-----------------------|--------------------------|
-| Tên biến        | Camel Case  | `firstName`           | Danh từ                  |
-| Hằng số         | Uppercase   | `FIRST_WEEK_DAY`      | Có gạch chân giữa các từ |
-| Tên class, enum | Pascal Case | `CreateUser`          | Danh từ                  |
-| Tham số         | Camel Case  | `displayTime`         | Danh từ                  |
-| Thuộc tính      | Pascal Case | `BackgroundColor`     | Danh từ                  |
-| Phương thức     | Pascal Case | `GetAge()`            | Có gạch chân giữa các từ |
-| Sự kiện         | Pascal Case | `SelectedIndexChanged`| Có gạch chân giữa các từ |
-| Giao diện       | Pascal Case | `IButtonControl`      | Có gạch chân giữa các từ |
-- Tránh thêm các tiền tố hoặc hậu tố dư thừa vô nghĩa:
+| Element         | Type        | Example               | Note                                    |
+|-----------------|-------------|-----------------------|-----------------------------------------|
+| Variable name   | Camel Case  | `firstName`           | Noun                                    |
+| Constant        | Uppercase   | `FIRST_WEEK_DAY`      | There is an underline between the words |
+| Class name, enum| Pascal Case | `CreateUser`          | Noun                                    |
+| Parameter       | Camel Case  | `displayTime`         | Noun                                    |
+| Property        | Pascal Case | `BackgroundColor`     | Noun                                    |
+| Method          | Pascal Case | `GetAge()`            | There is an underline between the words |
+| Event           | Pascal Case | `SelectedIndexChanged`| There is an underline between the words |
+| Interface       | Pascal Case | `IButtonControl`      | There is an underline between the words |
+- Avoid adding meaningless redundant prefixes or suffixes:
   - Không nên:
   ```
   enum BorderEnum { ... }
@@ -312,36 +312,36 @@ Export a detailed report on the number of books sold, revenue and profit for the
   Animal.Weight
   ```
 - Tên biến, phương thức bool phải thể hiện được ý nghĩa nếu trả về true hoặc false. Nên sử dụng tiền tố “Is” “Can” “Has” trước tên biến, phương thức:
-  - Không nên:
+  - Shouldn't:
   ```
   bool CheckAdmin(int n) { }
   bool Expired() { }
   bool checked = true;
   ```
-  - Nên:
+  - Should:
   ```
   bool IsAdmin(int n) { }
   bool IsExpired() { }
   bool isChecked = true;
   ```
-- Không dùng các tên giống nhau(chỉ phân biệt kiểu chữ in hoa hay thường). Ta khó nhận ra các định danh nhất là khi trong cùng ngữ cảnh và chỉ phân biệt các định danh bằng kiểu chữ in hoa/thường.
-- Không tạo 2 namespace cùng tên và chỉ khác nhau ở kiểu chữ viết(chữ hoa/Chữ thường), ví dụ:
+- Don't use the same names (only case sensitive). It's difficult to recognize identifiers especially when in the same context and distinguish identifiers only by uppercase/lowercase letters.
+- Don't create 2 namespaces with the same name and differ only in the font style (uppercase/lowercase), for example:
   ```
   Namespace SunAsterisk
   Namespace sunAsterisk
   ```
-- Không nên xây dựng 1 phương thức với các tham số có cùng tên và chỉ khác nhau kiểu chữ, ví dụ:
+- It's not recommended to build a method with parameters with the same name and different case only, for example:
   ```
   void MyFunction(string a, string A)
   ```
-- Không xây dựng 1 kiểu với các tên property giống nhau và chỉ phân biệt ở kiểu chữ, ví dụ:
+- Don't buld a type with the same property names and distinguish only in the type, for example:
   ```
   int Color {get, set}
   int COLOR {get, set}
   ```
 ## 6.3. Control prefixed
-Bắt buộc đặt tên cho tất cả các control có tham gia xử lý dưới nền. Một số control được đặt theo kiểu Pascal với phần tiền tố như sau:
-| Control      | Tiền tố | Ví dụ       |
+- Mandatory naming of all controls involved in background processing. Some controls are set in Pascal style with the following prefix:
+| Control      | Prefix  | Example     |
 |--------------|---------|-------------|
 | Panel        | pnl     | pnlGroup    |
 | Checkbox     | chk     | chkReadOnly |
@@ -354,42 +354,42 @@ Bắt buộc đặt tên cho tất cả các control có tham gia xử lý dư�
 | Label        | lbl     | lblName     |
 | DataGridView | dgv     | dgvBook     |
 ## 6.4. Source code distribution rules
-- Mỗi file mã nguồn chỉ chứa duy nhất một class. Tên class chính phải trùng với tên file mã nguồn. Ví dụ: Class Student sẽ được chứa trong file Student.cs.
-- Với các kiểu enum, struct độc lập đơn giản ngoài class có thể được khai báo trong một file mã nguồn riêng hoặc trong file mã nguồn của class khác.
-- Interface phải được khai báo trong một file mã nguồn riêng.
-- Thứ tự khai báo:
-  - Khối khai báo thư viện
+- Each source file contains only one class. Main class name must match the source file name. For example: Class Student will contained in Student.cs file.
+- With enum types, a simple independent struct outside of a class can be declared in a separate source file or another class's source code file.
+- Interface must be declared in a separate source file.
+- Order of declaration:
+  - Declare library
   ```
   using System.Data;
   using System.Drawing;
   ```
-  - Khai báo namespace
+  - Declare namespace
   ```
   namespace SQLBackup;
   ```
-  - Khai báo các struct/enum độc lập (nếu có)
+  - Declare independent structs/enums (if any)
   ```
   public enum HumanClass { A, B, C, D, E }
   ```
-  - Khai báo lớp chính
+  - Declare main class
   ```
   public class Student : Human {}
   ```
 # 7. Result
 ## 7.1. Development environment and Deployment environment
-- Môi trường phát triển ứng dụng:
-  - Hệ điều hành: Microsoft Windows 10
-  - Hệ quản trị cơ sở dữ liệu: Microsoft SQL Server
-  - Công cụ phân tích thiết kế: Visual Studio 2019
-  - Công cụ xây dựng ứng dụng: Visual Studio 2019
-- Môi trường triển khai ứng dụng:
-  - Hệ điều hành: Microsoft Windows
-  - Cần cài đặt .Net Framework 4.0 hoặc cao hơn
-  - Để chương trình hoạt động cần có đủ các dll trong folder dll
+- Application development environment:
+  - Operating system: Microsoft Windows 10
+  - Database management system: Microsoft SQL Server
+  - Design analysis tool: Visual Studio 2019
+  - App builder: Visual Studio 2019
+- Application deployment environment:
+  - Operating system: Microsoft Windows
+  - Need to install .Net Framework 4.0 or higher.
+  - In order for the program to work, there should be enough dlls in the dll folder.
 ## 7.2. Result
-- Chương trình đã được hoàn thiện hầu hết các chức năng, nhưng vẫn có những chức năng chưa được hoàn thiện như: Thêm tài khoản, Xuất file báo cáo dạng PDF hoặc Excel.
+- The programe has completed most of the functions, but there are still incomplete functions such as: Add account, Export report file in PDF or Excel format.
 ## 7.3. Development
-- Hoàn thiện các chức năng và giao diện chưa hoàn tất.
-- Cải thiện hiệu năng của chương trình để phù hợp với thực tiễn.
-- Bổ sung các chức năng liên quan đến CSDL: backup/restore.
-- Bổ sung phân quyền tài khoản cho các chức năng của phần mềm.
+- Finish incomplete functions and interfaces.
+- Impove program performance to match reality.
+- Add functions related to the database: backup/restore.
+- Add account authorization for software functions.
