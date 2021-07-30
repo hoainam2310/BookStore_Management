@@ -189,7 +189,7 @@ The plan consists of 5 stages:
 | 9       | fXoaTacGia     | Delete the information of the author by the author code                                  |
 | 10      | fLinhVuc       | Add and remove book field names                                                          |
 | 11      | fLoaiSach      | Add and remove book category names                                                       |
-| 12      | fNhaXuatBan    | Thêm và xóa nhà xuất bản sách                                                            |
+| 12      | fNhaXuatBan    | Add and remove publisher names                                                            |
 | 13      | fKho           | Show the number of books in stock and add the number of books                            |
 | 14      | fHoaDon        | Show bill and bill details. Add/Remove/Edit bills and bill details                       |
 | 15      | fThongKe       | Show a list of bills for a selected date range                                           |
