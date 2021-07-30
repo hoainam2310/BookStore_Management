@@ -2,7 +2,7 @@
 - Software Technology Project
   - Project Name: BookStore Management
   - Discription: Manage tasks in the bookstore
-  - Instructor: Mr.Huynh Ngoc Tin, Mr.Tran Khanh Nguyen
+  - Instructor: Mr.Huynh Ngoc Tin
 - Members:
 - - [Nguyen Hoai Nam](https://github.com/hoainam2310) 
   - [Đang Hoang Minh](https://github.com/danghoangminh) 
