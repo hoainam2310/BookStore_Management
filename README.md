@@ -144,16 +144,16 @@ The plan consists of 5 stages:
 ### 3.2.6. SACH table
 | Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
 |---------|----------------|---------------|-----------------------------|-----------------------------|
-| 1       | MASACH         | char(7)       | Selt-generated              | Mã phân biệt sách           |
-| 2       | TENSACH        | nvarchar(100) | Not null                    | Tên của sách                |
-| 3       | MATG           | char(7)       | Not Null, Existed           | Mã phân biệt tác giả        |
-| 4       | TENLINHVUC     | nvarchar(30)  | Not Null, Existed           | Tên lĩnh vực sách           |
-| 5       | TENLOAISACH    | nvarchar(30)  | Not Null, Existed           | Tên loại sách               |
-| 6       | GIAMUA         | int           | >= 0                        | Giá nhập sách               |
-| 7       | GIABIA         | int           | >= 0                        | Giá bán sách                |
-| 8       | LANTAIBAN      | int           | >= 0                        | Số lần tái bản của sách     |
-| 9       | TENNHAXUATBAN  | nvarchar(50)  | Not Null, Existed           | Tên nhà xuất bản sách       |
-| 10      | NAMXUATBAN     | datetime      | Not Null, Existed           | Năm sách được xuất bản      |
+| 1       | MASACH         | char(7)       | Selt-generated              | Book identification code    |
+| 2       | TENSACH        | nvarchar(100) | Not null                    | Name of book                |
+| 3       | MATG           | char(7)       | Not Null, Existed           | Author identification code  |
+| 4       | TENLINHVUC     | nvarchar(30)  | Not Null, Existed           | Name of book field          |
+| 5       | TENLOAISACH    | nvarchar(30)  | Not Null, Existed           | Name of the type of book    |
+| 6       | GIAMUA         | int           | >= 0                        | Book entry price            |
+| 7       | GIABIA         | int           | >= 0                        | Book sell price             |
+| 8       | LANTAIBAN      | int           | >= 0                        | Number of reprints          |
+| 9       | TENNHAXUATBAN  | nvarchar(50)  | Not Null, Existed           | Name of book producer       |
+| 10      | NAMXUATBAN     | datetime      | Not Null, Existed           | The year the book was published      |
 ### 3.2.7. KHO table
 | Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
 |---------|----------------|---------------|-----------------------------|-----------------------------|
