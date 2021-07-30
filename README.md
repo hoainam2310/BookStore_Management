@@ -136,7 +136,7 @@ The plan consists of 5 stages:
 ### 3.2.4. LOAISACH table
 | Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
 |---------|----------------|---------------|-----------------------------|-----------------------------|
-| 1       | TENLOAISACH    | nvarchar(30)  | Not Null                    | Name of the type of book    |
+| 1       | TENLOAISACH    | nvarchar(30)  | Not Null                    | Name of book category       |
 ### 3.2.5. NHAXUATBAN table
 | Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
 |---------|----------------|---------------|-----------------------------|-----------------------------|
@@ -148,7 +148,7 @@ The plan consists of 5 stages:
 | 2       | TENSACH        | nvarchar(100) | Not null                    | Name of book                |
 | 3       | MATG           | char(7)       | Not Null, Existed           | Author identification code  |
 | 4       | TENLINHVUC     | nvarchar(30)  | Not Null, Existed           | Name of book field          |
-| 5       | TENLOAISACH    | nvarchar(30)  | Not Null, Existed           | Name of the type of book    |
+| 5       | TENLOAISACH    | nvarchar(30)  | Not Null, Existed           | Name of book category       |
 | 6       | GIAMUA         | int           | >= 0                        | Book entry price            |
 | 7       | GIABIA         | int           | >= 0                        | Book sell price             |
 | 8       | LANTAIBAN      | int           | >= 0                        | Number of reprints          |
@@ -178,96 +178,96 @@ The plan consists of 5 stages:
 ## 4.1. Interface list
 | Numbers | Interface Name | Meaning/Notes                                                                          |
 |---------|----------------|------------------------------------------------------------------------------------------|
-| 1       | fDangNhap      | Đăng nhập vào hệ thống bằng username và password                                         |
-| 2       | fViewTong      | Màn hình chính, hiển thị danh sách các đầu sách hiện có                                  |
-| 3       | fTaiKhoan      | Hiển thị danh sách user của hệ thống và chỉnh sửa mật khẩu                               |
-| 4       | fThemSach      | Nhập thông tin để thêm sách                                                              |
-| 5       | fSuaSach       | Sửa thông tin của sách theo mã sách                                                      |
-| 6       | fXoaSach       | Xóa thông tin của sách theo mã sách                                                      |
-| 7       | fThemTacGia    | Nhập thông tin để thêm tác giả                                                           |
-| 8       | fSuaTacGia     | Sửa thông tin của tác giả theo mã tác giả                                                |
-| 9       | fXoaTacGia     | Xóa thông tin của tác giả theo mã tác giả                                                |
-| 10      | fLinhVuc       | Thêm và xóa lĩnh vực sách                                                                |
-| 11      | fLoaiSach      | Thêm và xóa loại sách                                                                    |
+| 1       | fDangNhap      | Log in to the system with username and password                                          |
+| 2       | fViewTong      | The main screen shows a list of available titles                                         |
+| 3       | fTaiKhoan      | Display the list of system users and edit passwords                                      |
+| 4       | fThemSach      | Enter information to add books                                                           |
+| 5       | fSuaSach       | Edit the information of the book by the book code                                        |
+| 6       | fXoaSach       | Delete the information of the book by the book code                                      |
+| 7       | fThemTacGia    | Enter information to add authors                                                         |
+| 8       | fSuaTacGia     | Edit the information of the author by the author code                                    |
+| 9       | fXoaTacGia     | Delete the information of the author by the author code                                  |
+| 10      | fLinhVuc       | Add and remove book field names                                                          |
+| 11      | fLoaiSach      | Add and remove book category names                                                       |
 | 12      | fNhaXuatBan    | Thêm và xóa nhà xuất bản sách                                                            |
-| 13      | fKho           | Hiển thị số lượng sách còn trong kho và thêm số lượng sách                               |
-| 14      | fHoaDon        | Hiển thị hóa đơn và chi tiết hóa đơn. Thêm/xóa/sửa hóa đơn và chi tiết hóa đơn           |
-| 15      | fThongKe       | Hiển thị danh sách hóa đơn trong khoảng ngày chọn                                        |
-| 16      | fBaoCao        | Hiển thị danh sách các đầu sách đã bán được, doanh thu, lợi nhuận trong khoảng ngày chọn |
+| 13      | fKho           | Show the number of books in stock and add the number of books                            |
+| 14      | fHoaDon        | Show bill and bill details. Add/Remove/Edit bills and bill details                       |
+| 15      | fThongKe       | Show a list of bills for a selected date range                                           |
+| 16      | fBaoCao        | Show a list of sold titles, sales, and profits in the selected date range                |
 ## 4.2. Describe in detail of each interface
 ### 4.2.1. fDangNhap interface
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/DangNhap.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/main/Scene/DangNhap.png)
 
-Người dùng điền thông tin Username/Password để đăng nhập. Nếu đăng nhập thất bại quá 3 lần sẽ tự tắt chương trình.
+User fills in Username/Password information to log in. If the login fails more than 3 times, the program will automatically shut down.
 ### 4.2.2. fViewTong interface
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/Quanlynhasach.png)
+![](https://github.com/hoainam2310/BookStore_Management/blob/main/Scene/Quanlynhasach.png)
 
-Hiển thị những đầu sách có trong database, doanh thu và số lượng khách trong ngày hôm đó. Menu ở trên chứa các chức năng của chương trình.
+Displays the titles in the database, the revenue and the number of customers that day. The Menu above contains the program's functions. 
 ### 4.2.3. fTaiKhoan interface
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/ThayDoiThongTinAcc.png)
+![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/ThayDoiThongTinAcc.png)
 
-Cho phép thay đổi mật khẩu của tài khoản, yêu cầu nhập đúng mật khẩu cũ khi muốn thay đổi mật khẩu mới.
+Allows to change the account's password, requires entering the correct old password when you want to change the new password.
 ### 4.2.4. fThemSach interface
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/ThemSach.png)
+![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/ThemSach.png)
 
-Cho phép thêm đầu sách mới vào database. Yêu cầu nhập đầy đủ thông tin, nếu không sẽ báo lỗi nhập thiếu và yêu cầu bổ sung.
+Allows adding new titles to the database. Please enter complete information, otherwise, you'll receive a missing input error and ask additional information.
 ### 4.2.5. fSuaSach interface
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/SuaSach.png)
+![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/SuaSach.png)
 
-Cho phép sửa thông tin sách trong database. Yêu cầu nhập đầy đủ thông tin, nếu không sẽ báo lỗi nhập thiếu và yêu cầu bổ sung.
+Allows editting book information in the database. Please enter complete information, otherwise, you'll receive a missing input error and ask for additional information.
 ### 4.2.6. fXoaSach interface
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/XoaSach.png)
+![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/XoaSach.png)
 
-Cho phép xóa sách trong database. Chọn sách cần xóa trong list sách hiển thị.
+Allows deleting books in the database. Select the book to delete in the list of displayed books.
 ### 4.2.7. fThemTacGia interface
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/ThemTG.png)
+![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/ThemTG.png)
 
-Cho phép thêm tác giả mới vào database. Yêu cầu nhập tên tác giả, nếu không sẽ báo lỗi nhập thiếu và yêu cầu bổ sung. Đối với ô Quê Quán, Năm Sinh, Năm Mất nếu không có thì phải chọn nút 'CHƯA RÕ' không sẽ báo lỗi thiếu thông tin.
+Allows adding new authors to the database. Please enter the author's name, otherwise it will report a missing input error and add for additional information. For the box "Hometown", "Year of birth", "Year of death", if it's not available, you must select the "unknown" button or it will report an error of missing information.
 ### 4.2.8. fSuaTacGia interface
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/SuaTG.png)
+![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/SuaTG.png)
 
-Cho phép sửa thông tin tác giả trong database. Yêu cầu nhập tên tác giả, nếu không sẽ báo lỗi nhập thiếu và yêu cầu bổ sung. Đối với ô Quê Quán, Năm Sinh, Năm Mất nếu không có thì phải chọn nút 'CHƯA RÕ' không sẽ báo lỗi thiếu thông tin.
+Allows editting author information in the database. Please enter the author's name, otherwise it will report a missing input error and add for additional information. For the box "Hometown", "Year of birth", "Year of death", if it's not available, you must select the "unknown" button or it will report an error of missing information.
 ### 4.2.9. fXoaTacGia interface
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/XoaTG.png)
+![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/XoaTG.png)
 
-Cho phép xóa tác giả trong database. Chọn tác giả cần xóa trong list sách hiển thị.
+Allows deleting authors in the database. Select the authors to delete in the list of displayed authors.
 ### 4.2.10. fLinhVuc interface
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/LinhVuc.png)
+![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/LinhVuc.png)
 
-Cho phép thêm lĩnh vực mới vào database. Nếu muốn xóa thì chọn lĩnh vực cần xóa ở menu bên dưới và bấm nút xóa.
+Allows adding new fields to the database. If you want to delete, select the fields to delete in the Menu below and press the delete button.
 ### 4.2.11. fLoaiSach interface
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/LoaiSach.png)
+![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/LoaiSach.png)
 
-Cho phép thêm loại sách mới vào database. Nếu muốn xóa thì chọn loại sách cần xóa ở menu bên dưới và bấm nút xóa.
+Allows adding new book categories to the database. If you want to delete, select the book categories to delete in the Menu below and press the delete button.
 ### 4.2.12. fNhaXuatBan interface
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/NXB.png)
+![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/NXB.png)
 
-Cho phép thêm nhà xuất bản mới vào database. Nếu muốn xóa thì chọn nhà xuất bản cần xóa ở menu bên dưới và bấm nút xóa.
+Allows adding new publishers to the database. If you want to delete, select the publishers to delete in the Menu below and press the delete button.
 ### 4.2.13. fKho interface
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/Kho.png)
+![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/Kho.png)
 Gồm 2 phần:
 - Phần trên: cho phép sửa số lượng sách có trong kho hoặc xóa luôn sách.
 - Phần dưới: thêm số lượng cho đầu sách có trong kho.
 ### 4.2.14. fHoaDon interface
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/HoaDon.png)
+![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/HoaDon.png)
 Gồm 2 phần:
 - Phần trên: hiển thị danh sách hóa đơn hiện có trong database cho phép xóa/sửa hóa đơn và xem chi tiết hóa đơn đó ở bảng kế bên.
 - Phần dưới: thêm/sửa hóa đơn, thêm vật phẩm vô hóa đơn, yêu cầu nhập đầy đủ thông tin.
 ### 4.2.15. fThongKe interface
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/ThongKe.png)
+![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/ThongKe.png)
 Chọn khoảng ngày cần thống kê bán hàng, phần mềm sẽ hiển thị những hóa đơn trong khoảng ngày được chọn.
 ### 4.2.16. fBaoCao interface
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/Scene/BaoCao.png)
+![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/Scene/BaoCao.png)
 Xuất báo cáo chi tiết về số lượng bán đượccác loại sách, doanh thu và lợi nhuận trong khoảng ngày đã chọn ở màn hình fThongKe.
 # 5. Design architecture
 ## 5.1. System architecture
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/layer.png)
+![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/layer.png)
 | Thành phần | Diễn giải                         |
 |------------|-----------------------------------|
 | Client     | Ứng dụng tương tác với người dùng |
 | Data       | Nơi chứa dữ liệu của hệ thống     |
 ## 5.2. Desribe in detail system architecture
-![](https://github.com/danghoangminh/BookStoreManagement/blob/finalcode/folderview.png)
+![](https://github.com/hoainam2310/BookStoreManagement/blob/finalcode/folderview.png)
 - Ứng dụng được thiết kế theo mô hình 2 lớp (được viết chung trong 1 project) gồm:
   - View xử lý giao diện và xử lý tác vụ.
   - DAO gọi các truy xuất từ csdl (SQL).
