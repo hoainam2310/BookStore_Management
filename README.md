@@ -157,23 +157,23 @@ The plan consists of 5 stages:
 ### 3.2.7. KHO table
 | Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
 |---------|----------------|---------------|-----------------------------|-----------------------------|
-| 1       | MASACH         | char(7)       | Existed                     | Mã phân biệt sách           |
-| 2       | SOLUONG        | int           | >= 1                        | Số lượng sách còn           |
+| 1       | MASACH         | char(7)       | Existed                     | Book identification code    |
+| 2       | SOLUONG        | int           | >= 1                        | Number of books remaining   |
 ### 3.2.8. HOADON table
 | Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
 |---------|----------------|---------------|-----------------------------|-----------------------------|
-| 1       | MAHOADON       | char(7)       | Selt-generated              | Mã phân biệt hóa đơn        |
-| 2       | TENKHACHHANG   | nvarchar(50)  | Not null                    | Tên của khách hàng          |
-| 3       | NGAYLAP        | datetime      | Selt-generated              | Ngày lập hóa đơn            |
-| 4       | TONGTIEN       | decimal(10, 2)| >= 0                        | Tổng tiền hóa đơn           |
+| 1       | MAHOADON       | char(7)       | Selt-generated              | Bill identification code    |
+| 2       | TENKHACHHANG   | nvarchar(50)  | Not null                    | Name of customer            |
+| 3       | NGAYLAP        | datetime      | Selt-generated              | Bill date                   |
+| 4       | TONGTIEN       | decimal(10, 2)| >= 0                        | Total amount in bill        |
 ### 3.2.9. CHITIETHOADON table
 | Numbers | Attribute Name | Type          | Constraint                  | Meaning/Notes               |
 |---------|----------------|---------------|-----------------------------|-----------------------------|
-| 1       | MAHOADON       | char(7)       | Existed                     | Mã phân biệt hóa đơn        |
-| 2       | MASACH         | char(7)       | Existed                     | Mã phân biệt sách           |
-| 3       | SOLUONG        | int           | >= 1                        | Số lượng sách mua           |
-| 4       | GIATIEN        | int           | >= 0                        | Giá bán sách                |
-| 5       | THANHTIEN      | int           | >= 0                        | Giá bán sách x Số lượng sách|
+| 1       | MAHOADON       | char(7)       | Existed                     | Bill identification code    |
+| 2       | MASACH         | char(7)       | Existed                     | Book identification code    |
+| 3       | SOLUONG        | int           | >= 1                        | Number of books purcheased  |
+| 4       | GIATIEN        | int           | >= 0                        | Book sell price             |
+| 5       | THANHTIEN      | int           | >= 0                        | Book sell price x Number of books|
 # 4. Design interface
 ## 4.1. Interface list
 | Numbers | Interface Name | Meaning/Notes                                                                          |
