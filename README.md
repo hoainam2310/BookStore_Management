@@ -256,30 +256,30 @@ Consists of 2 parts:
 - Lower part: Add/Edit bills, add the items to the bill and ask for full information.
 ### 4.2.15. fThongKe interface
 ![](https://github.com/hoainam2310/BookStore_Management/blob/main/Scene/ThongKe.png)
-Chọn khoảng ngày cần thống kê bán hàng, phần mềm sẽ hiển thị những hóa đơn trong khoảng ngày được chọn.
+Select the date range for which sales statistics are required, the software will display the bills in the selected date range.
 ### 4.2.16. fBaoCao interface
 ![](https://github.com/hoainam2310/BookStore_Management/blob/main/Scene/BaoCao.png)
 
-Xuất báo cáo chi tiết về số lượng bán đượccác loại sách, doanh thu và lợi nhuận trong khoảng ngày đã chọn ở màn hình fThongKe.
+Export a detailed report on the number of books sold, revenue and profit for the selected date range on the fThongKe interface.
 # 5. Design architecture
 ## 5.1. System architecture
 ![](https://github.com/hoainam2310/BookStore_Management/blob/main/layer.png)
-| Thành phần | Diễn giải                         |
-|------------|-----------------------------------|
-| Client     | Ứng dụng tương tác với người dùng |
-| Data       | Nơi chứa dữ liệu của hệ thống     |
+| Elements   | Explain                               |
+|------------|---------------------------------------|
+| Client     | Application that interacts with users |
+| Data       | Where the system's data is stored     |
 ## 5.2. Desribe in detail system architecture
 ![](https://github.com/hoainam2310/BookStore_Management/blob/main/folderview.png)
-- Ứng dụng được thiết kế theo mô hình 2 lớp (được viết chung trong 1 project) gồm:
-  - View xử lý giao diện và xử lý tác vụ.
-  - DAO gọi các truy xuất từ csdl (SQL).
+- The application is designed in a 2-layer model (written in 1 project) including:
+  - View handles the interface and handles the task.
+  - DAO calls accesses from database (SQL).
 # 6. Coding conventions
 ## 6.1. Naming conventions
-| Kiểu        | Mô tả           | Ví dụ        |
+| Type        | Discription     | Example      |
 |-------------|-----------------|--------------|
-| Pascal Case | Chữ cái đầu tiên trong từ định danh và chữ cái đầu tiên của mỗi từ nối theo sau phải được viết hoa. Sử dụng Pascal Case để đặt tên cho một tên có từ 3 ký tự trở lên | `CodingConv` |
-| Camel Case  | Chữ cái đầu tiên trong từ định danh là chữ thường và chữ cái đầu tiên của mối từ nối theo sau phải được viết hoa          | `codingConv` |
-| Uppercase   | Tất cả các ký tự trong từ định danh phải được viết hoa. Sử dụng quy tắc này đối với tên định danh có từ 2 ký tự trở xuống | `System.IO ` |
+| Pascal Case | First letter of the identifier and the first letter of each word that follows must be capitalized. Use Pascal Case to name a name with 3 or more characters | `CodingConv` |
+| Camel Case  | First letter of the identifier is lowercase and the first letter of each word that follows must be capitalized          | `codingConv` |
+| Uppercase   | All characters in the identifier must be capitalized. Use this rule for identifiers with 2 characters or les | `System.IO ` |
 ## 6.2. Conventions used when coding
 | Loại            | Kiểu        | Ví dụ                 | Ghi chú                  |
 |-----------------|-------------|-----------------------|--------------------------|
