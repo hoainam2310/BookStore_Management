@@ -5,7 +5,7 @@
   - Instructor: Mr.Huynh Ngoc Tin
 - Members:
 - - [Nguyen Hoai Nam](https://github.com/hoainam2310) 
-  - [Đang Hoang Minh](https://github.com/danghoangminh) 
+  - [Dang Hoang Minh](https://github.com/danghoangminh) 
   - [Nguyen Chi Dung](https://github.com/nguyenchidungg) 
   - [Nguyen Dương Hai](https://github.com/iamthedh7) 
 - Technology:
