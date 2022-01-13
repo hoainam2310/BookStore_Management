@@ -311,7 +311,7 @@ Export a detailed report on the number of books sold, revenue and profit for the
   ```
   Animal.Weight
   ```
-- The variable and bool method name must be meaningful if it returns true or false. Should use prefix "Is", "Can", "Has" before variabel and method name:
+- The variable and bool method names must be meaningful if it returns true or false. Should use prefix "Is", "Can", "Has" before variabel and method names:
   - Shouldn't:
   ```
   bool CheckAdmin(int n) { }
