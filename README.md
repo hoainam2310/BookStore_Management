@@ -292,26 +292,26 @@ Export a detailed report on the number of books sold, revenue and profit for the
 | Event           | Pascal Case | `SelectedIndexChanged`| There is an underline between the words |
 | Interface       | Pascal Case | `IButtonControl`      | There is an underline between the words |
 - Avoid adding meaningless redundant prefixes or suffixes:
-  - Không nên:
+  - Shouldn't:
   ```
   enum BorderEnum { ... }
   class CHuman { ... }
   ```
-  - Nên:
+  - Should:
   ```
   enum Border { ... }
   class Human { ... }
   ```
-- Không thêm tên lớp chứa vào tên thuộc tính:
-  - Không nên:
+- Don't add the class name to the attribute name:
+  - Shouldn't:
   ```
   Animal.WeightAnimal
   ```
-  - Nên:
+  - Should:
   ```
   Animal.Weight
   ```
-- Tên biến, phương thức bool phải thể hiện được ý nghĩa nếu trả về true hoặc false. Nên sử dụng tiền tố “Is” “Can” “Has” trước tên biến, phương thức:
+- The variable and bool method name must be meaningful if it returns true or false. Should use prefix "Is", "Can", "Has" before variabel and method name:
   - Shouldn't:
   ```
   bool CheckAdmin(int n) { }
